@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using TareaCRUD.Data;
 using TareaCRUD.Models;
 
 namespace TareaCRUD.Controllers
@@ -12,6 +13,7 @@ namespace TareaCRUD.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -23,7 +25,7 @@ namespace TareaCRUD.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }

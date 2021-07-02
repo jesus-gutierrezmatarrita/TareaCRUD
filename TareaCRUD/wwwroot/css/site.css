@@ -24,6 +24,11 @@ a {
   border-color: #1861ac;
 }
 
+.child {
+    float: left;
+    width: 50%;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

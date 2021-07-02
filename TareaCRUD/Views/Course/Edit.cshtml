@@ -1,0 +1,43 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "Actualizar curso";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <section class="child">
+        <img src="~/img/update.svg" width="500" height="500" />
+    </section>
+    <section class="child">
+        <div class="text-center">
+            <br /><br /><br />
+            <h1 class="display-4">Actualizar curso</h1>
+            <form method="post" asp-action="Edit">
+                <input type="hidden" asp-for="Id" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="col-form-label-lg">Nombre de curso</label>
+                    <input asp-for="Name" class="form-control" type="text" placeholder="Escriba el nombre" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Credits" class="col-form-label-lg">Créditos del curso</label>
+                    <input asp-for="Credits" class="form-control" type="number" placeholder="Escriba los créditos" min="0" max="12" />
+                    <span asp-validation-for="Credits" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Actualizar curso" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </section>
+
+</section>
+
+@section Scripts {
+    @{
+        <parcial name="_ValidationScriptsParcial" />
+    }
+} 
