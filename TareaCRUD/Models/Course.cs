@@ -9,7 +9,6 @@ namespace TareaCRUD.Models
     public class Course
     {
         [Key]
-        [Display(Name = "Sigla del curso")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El nombre del curso es obligatorio")]
@@ -20,6 +19,10 @@ namespace TareaCRUD.Models
         [Required(ErrorMessage = "Los créditos del curso son obligatorios anotarlos")]
         [Display(Name = "Créditos")]
         public short Credits { get; set; }
+
+        [Required(ErrorMessage = "Es importante escoger el tipo de modalidad")]
+        [Display(Name = "Modalidad")]
+        public string Modality { get; set; }
 
     }
 }
